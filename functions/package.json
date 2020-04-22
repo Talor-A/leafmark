@@ -16,6 +16,7 @@
     "cross-fetch": "^3.0.4",
     "firebase-admin": "^8.10.0",
     "firebase-functions": "^3.6.0",
+    "node-vibrant": "^3.1.5",
     "unfluff": "^3.2.0"
   },
   "devDependencies": {
