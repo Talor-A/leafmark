@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import withFirebaseAuth from "react-with-firebase-auth";
-import {app, providers, firebaseAppAuth } from './firebase'
-import Bookshelf from './bookshelf'
+import { app, providers, firebaseAppAuth } from "./firebase";
+import Bookshelf from "./bookshelf";
 
 class App extends React.Component {
   constructor() {
@@ -34,7 +34,7 @@ class App extends React.Component {
           <button onClick={signInWithTwitter}>Sign in with Twitter</button>
         )}
         <ul>{lis}</ul>
-        {user != null && <Bookshelf user={user}/>}
+        {user != null && <Bookshelf user={user} />}
       </main>
     );
   }
