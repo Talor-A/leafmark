@@ -1,5 +1,6 @@
 import * as functions from 'firebase-functions';
 import unfluff from 'unfluff'
+import fetch from 'cross-fetch'
 
 // const agent = new http.Agent({keepAlive: true});
 
