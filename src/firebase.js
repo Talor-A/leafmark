@@ -20,6 +20,5 @@ export const providers = {
   twitterProvider: new firebase.auth.TwitterAuthProvider()
 };
 
-
 // create mr data man
 app.firestore().settings({});
