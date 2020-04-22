@@ -6,15 +6,30 @@
 }
 
 .link-drop-zone {
-  min-height: 240px;
-  width: 240px;
+/*   min-height: 240px;
+  width: 240px; */
   background-color: aquamarine;
+}
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 240px);
+  grid-gap: 10px;
+}
+.shelf-item {
+  background-color: lemonchiffon;
+  padding: 1em;
+  width:240px;
+  height:400px;
+}
+.shelf-item > summary {
+  background-color: lemonchiffon;
+  position: sticky;
 }
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-  background-color:mediumaquamarine;
+  background-color: mediumaquamarine;
 }
 
 h1 {

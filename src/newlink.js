@@ -1,36 +1,33 @@
-import React from 'react'
-import firebase from 'firebase'
+import React from "react";
 
 class NewLink extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = { value: "" };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
-    this.setState({value: event.target.value});
+    this.setState({ value: event.target.value });
   }
 
   handleSubmit(event) {
-    
-    var unroll = firebase.functions().httpsCallable('unroll');
-    unroll({url: this.state.value}).then(function(result) {
-      console.log(result);
-    });
-    
-    
+    this.props.handleSubmit(this.state.value);
     event.preventDefault();
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="new-link shelf-item">
         <label>
           linky-link:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
         </label>
         <input type="submit" value="Submit" />
       </form>
@@ -38,4 +35,4 @@ class NewLink extends React.Component {
   }
 }
 
-export default NewLink
+export default NewLink;
