@@ -1,0 +1,105 @@
+[debug] [2020-04-22T05:49:30.654Z] ----------------------------------------------------------------------
+[debug] [2020-04-22T05:49:30.656Z] Command:       /usr/local/Cellar/node/12.7.0/bin/node /usr/local/bin/firebase functions:shell
+[debug] [2020-04-22T05:49:30.656Z] CLI Version:   8.1.1
+[debug] [2020-04-22T05:49:30.656Z] Platform:      darwin
+[debug] [2020-04-22T05:49:30.656Z] Node Version:  v12.7.0
+[debug] [2020-04-22T05:49:30.657Z] Time:          Tue Apr 21 2020 22:49:30 GMT-0700 (Pacific Daylight Time)
+[debug] [2020-04-22T05:49:30.657Z] ----------------------------------------------------------------------
+[debug] [2020-04-22T05:49:30.657Z] 
+[debug] [2020-04-22T05:49:30.670Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-22T05:49:30.670Z] > authorizing via signed-in user
+[debug] [2020-04-22T05:49:30.671Z] [iam] checking project leafmark-771fa for permissions ["firebase.projects.get"]
+[debug] [2020-04-22T05:49:30.673Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/leafmark-771fa:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-04-22T05:49:31.148Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Wed, 22 Apr 2020 05:49:31 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=233","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "12"
+[info] ✔  functions: functions emulator started at http://localhost:5000
+[debug] [2020-04-22T05:49:31.174Z] [functions] Watching "/Users/ta/code/leafmark/functions" for Cloud Functions...
+[debug] [2020-04-22T05:49:31.182Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-04-22T05:49:31.182Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-04-22T05:49:31.182Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-04-22T05:49:31.183Z] DEBUG: [worker-~diagnostic~-d6f74aa1-6acb-4214-96a2-ba6d191aa3b8]: Assigning socketPath: /var/folders/cn/vz_lrgs56sz4vn49qy7680cm0000gn/T/fire_emu_94717.sock
+[debug] [2020-04-22T05:49:31.183Z] DEBUG: [worker-~diagnostic~-d6f74aa1-6acb-4214-96a2-ba6d191aa3b8]: BUSY
+[debug] [2020-04-22T05:49:31.438Z] DEBUG: [runtime-status] [94717] Functions runtime initialized. {"cwd":"/Users/ta/code/leafmark/functions","node_version":"12.7.0"}
+[debug] [2020-04-22T05:49:31.439Z] DEBUG: [runtime-status] [94717] Disabled runtime features: undefined
+[debug] [2020-04-22T05:49:31.441Z] DEBUG: [runtime-status] [94717] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-22T05:49:31.442Z] DEBUG: [runtime-status] [94717] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-22T05:49:31.444Z] DEBUG: [runtime-status] [94717] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-04-22T05:49:31.487Z] DEBUG: [runtime-status] [94717] Checked functions.config() {"config":{}}
+[debug] [2020-04-22T05:49:31.488Z] DEBUG: [runtime-status] [94717] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-22T05:49:31.489Z] DEBUG: [runtime-status] [94717] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-22T05:49:31.489Z] DEBUG: [runtime-status] [94717] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-22T05:49:31.489Z] DEBUG: [runtime-status] [94717] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-04-22T05:49:31.599Z] [functions[unroll]] http function initialized (http://localhost:5000/leafmark-771fa/us-central1/unroll).
+[info] i  functions: Loaded functions: unroll
+[warn] ⚠  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub
+[debug] [2020-04-22T05:49:31.610Z] DEBUG: [worker-~diagnostic~-d6f74aa1-6acb-4214-96a2-ba6d191aa3b8]: IDLE
+[debug] [2020-04-22T05:49:39.356Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-04-22T05:49:39.357Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-04-22T05:49:39.357Z] Accepted request POST /leafmark-771fa/us-central1/unroll --> unroll
+[debug] [2020-04-22T05:49:39.361Z] DEBUG: [worker-pool] addWorker(unroll)
+[debug] [2020-04-22T05:49:39.361Z] DEBUG: [worker-pool] Adding worker with key unroll, total=1
+[debug] [2020-04-22T05:49:39.361Z] DEBUG: [worker-pool] submitWork(triggerId=unroll)
+[debug] [2020-04-22T05:49:39.362Z] DEBUG: [worker-unroll-c59d0c84-f9d5-4ac5-8138-78fbc2d02f34]: Assigning socketPath: /var/folders/cn/vz_lrgs56sz4vn49qy7680cm0000gn/T/fire_emu_94752.sock
+[debug] [2020-04-22T05:49:39.362Z] DEBUG: [worker-unroll-c59d0c84-f9d5-4ac5-8138-78fbc2d02f34]: BUSY
+[debug] [2020-04-22T05:49:39.604Z] DEBUG: [runtime-status] [94752] Functions runtime initialized. {"cwd":"/Users/ta/code/leafmark/functions","node_version":"12.7.0"}
+[debug] [2020-04-22T05:49:39.605Z] DEBUG: [runtime-status] [94752] Disabled runtime features: undefined
+[debug] [2020-04-22T05:49:39.607Z] DEBUG: [runtime-status] [94752] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-22T05:49:39.607Z] DEBUG: [runtime-status] [94752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-22T05:49:39.609Z] DEBUG: [runtime-status] [94752] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-04-22T05:49:39.634Z] DEBUG: [runtime-status] [94752] Checked functions.config() {"config":{}}
+[debug] [2020-04-22T05:49:39.635Z] DEBUG: [runtime-status] [94752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-22T05:49:39.636Z] DEBUG: [runtime-status] [94752] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2020-04-22T05:49:39.636Z] DEBUG: [runtime-status] [94752] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.6.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2020-04-22T05:49:39.636Z] DEBUG: [runtime-status] [94752] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.10.0","resolution":"/Users/ta/code/leafmark/functions/node_modules/firebase-admin/lib/index.js"}}
+[debug] [2020-04-22T05:49:39.697Z] DEBUG: [runtime-status] [94752] Trigger "unroll" has been found, beginning invocation!
+[debug] [2020-04-22T05:49:39.697Z] [functions] Beginning execution of "unroll"
+[debug] [2020-04-22T05:49:39.697Z] DEBUG: [runtime-status] [94752] triggerDefinition {"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"unroll","entryPoint":"unroll"}
+[debug] [2020-04-22T05:49:39.697Z] DEBUG: [runtime-status] [94752] Running unroll in mode HTTPS
+[debug] [2020-04-22T05:49:39.701Z] DEBUG: [runtime-status] [94752] Attempting to listen to socketPath: /var/folders/cn/vz_lrgs56sz4vn49qy7680cm0000gn/T/fire_emu_94752.sock
+[debug] [2020-04-22T05:49:39.704Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-04-22T05:49:39.725Z] DEBUG: [runtime-status] [94752] Ephemeral server handling POST request
+[debug] [2020-04-22T05:49:39.728Z] DEBUG: [runtime-status] [94752] No callable functions auth found
+[warn] ⚠  External network resource requested!
+   - URL: "https://taloranderson.com/"
+ - Be careful, this may be a production service.
+[debug] [2020-04-22T05:49:39.747Z] DEBUG: [runtime-status] [94752] Ephemeral server survived.
+[info] >  { {"user":"{"}
+[info] >    title: 'Hi! I’m Talor Anderson.', {"user":"  title: 'Hi! I’m Talor Anderson.',"}
+[info] >    softTitle: 'Hi! I’m Talor Anderson.', {"user":"  softTitle: 'Hi! I’m Talor Anderson.',"}
+[info] >    date: null, {"user":"  date: null,"}
+[info] >    author: [], {"user":"  author: [],"}
+[info] >    publisher: 'Talor Anderson', {"user":"  publisher: 'Talor Anderson',"}
+[info] >    copyright: null, {"user":"  copyright: null,"}
+[info] >    favicon: '/favicon.png', {"user":"  favicon: '/favicon.png',"}
+[info] >    description: 'Hi! I’m Talor Anderson.', {"user":"  description: 'Hi! I’m Talor Anderson.',"}
+[info] >    keywords: undefined, {"user":"  keywords: undefined,"}
+[info] >    lang: 'en', {"user":"  lang: 'en',"}
+[info] >    canonicalLink: undefined, {"user":"  canonicalLink: undefined,"}
+[info] >    tags: [], {"user":"  tags: [],"}
+[info] >    image: null, {"user":"  image: null,"}
+[info] >    videos: [], {"user":"  videos: [],"}
+[info] >    links: [ {"user":"  links: ["}
+[info] >      { text: 'Intuit', href: 'https://intuit.com' }, {"user":"    { text: 'Intuit', href: 'https://intuit.com' },"}
+[info] >      { text: 'Scratch.app', href: '//scratch.app' }, {"user":"    { text: 'Scratch.app', href: '//scratch.app' },"}
+[info] >      { {"user":"    {"}
+[info] >        text: 'Cal Poly Pomona', {"user":"      text: 'Cal Poly Pomona',"}
+[info] >        href: 'https://www.cpp.edu/sci/computer-science/' {"user":"      href: 'https://www.cpp.edu/sci/computer-science/'"}
+[info] >      }, {"user":"    },"}
+[info] >      { {"user":"    {"}
+[info] >        text: 'dog &#x1F415;', {"user":"      text: 'dog &#x1F415;',"}
+[info] >        href: 'https://instagram.com/thatsabiglab' {"user":"      href: 'https://instagram.com/thatsabiglab'"}
+[info] >      }, {"user":"    },"}
+[info] >      { text: 'touch', href: 'https://twitter.com/talor_a' } {"user":"    { text: 'touch', href: 'https://twitter.com/talor_a' }"}
+[info] >    ], {"user":"  ],"}
+[info] >    text: 'I’m an incoming New Grad Software Engineer at Intuit.\n' + {"user":"  text: 'I’m an incoming New Grad Software Engineer at Intuit.\\n' +"}
+[info] >      '\n' + {"user":"    '\\n' +"}
+[info] >      'In the past, I was a developer at Scratch.app building an educational platform for students, teachers, and universities. Right now, I’m finishing my B. S. in Computer Science at Cal Poly Pomona. My focus has been in software engineering and machine learning.\n' + {"user":"    'In the past, I was a developer at Scratch.app building an educational platform for students, teachers, and universities. Right now, I’m finishing my B. S. in Computer Science at Cal Poly Pomona. My focus has been in software engineering and machine learning.\\n' +"}
+[info] >      '\n' + {"user":"    '\\n' +"}
+[info] >      'If you’re also interested in these things…\n' + {"user":"    'If you’re also interested in these things…\\n' +"}
+[info] >      '\n' + {"user":"    '\\n' +"}
+[info] >      'Get in touch and let’s talk about it! :)' {"user":"    'Get in touch and let’s talk about it! :)'"}
+[info] >  } {"user":"}"}
+[debug] [2020-04-22T05:49:39.960Z] [functions] Finished "unroll" in ~1s
+[debug] [2020-04-22T05:49:39.960Z] DEBUG: [worker-unroll-c59d0c84-f9d5-4ac5-8138-78fbc2d02f34]: IDLE
+[debug] [2020-04-22T05:49:39.960Z] [work-queue] {"queueLength":0,"workRunningCount":0}
