@@ -1,8 +1,7 @@
 import { collectionData } from "rxfire/firestore";
 import React from "react";
 import { app } from "./firebase";
-import DragDrop from './drag-drop';
-
+import NewLink from './newlink'
 class Bookshelf extends React.Component {
   constructor() {
     super();
@@ -31,7 +30,9 @@ class Bookshelf extends React.Component {
         ) : (
           <p>no links yet! add one!</p>
         )}
-        <DragDrop/>
+        <div class="new-link">
+          <NewLink/>
+        </div>
       </>
     );
   }
