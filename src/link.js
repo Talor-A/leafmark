@@ -38,14 +38,14 @@ const Link = ({ link, handleRefresh, handleDelete }) => {
   }
   return (
     <a target="_blank" rel="noopener noreferrer" href={url} className="shelf-item" style={{ backgroundColor, color }}>
-        {link.data.image && <img src={data.image} />}
-        <div className="text-area">
-          <p className={hasTitle ? "title":""} style={{ color, wordWrap: "break-word" }}>{hasTitle ? title : url}</p>
-          <p className="description">{data.description}</p>
-          {link.updatedAt && <p>{link.updatedAt.toDateString()}</p>}
-          <code dangerouslySetInnerHTML={{ __html: link.data.text }}></code>
-        </div>
-        <button className="delete" onClick={(e) => {e.preventDefault();handleDelete(link);}}>×</button>
+      {link.data.image && <img src={data.image} />}
+      <div className="text-area">
+        <p className={hasTitle ? "title" : ""} style={{ color, wordWrap: "break-word" }}>{hasTitle ? title : url}</p>
+        <p className="description">{data.description}</p>
+        {link.updatedAt && <p>{link.updatedAt.toDateString()}</p>}
+        <code dangerouslySetInnerHTML={{ __html: link.data.text }}></code>
+      </div>
+      <button style={{ backgroundColor, color }} className="delete" onClick={(e) => { e.preventDefault(); handleDelete(link); }}>×</button>
     </a>
   )
 };

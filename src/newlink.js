@@ -30,6 +30,7 @@ class NewLink extends React.Component {
           />
         </label>
         <input type="submit" value="Submit" />
+        <img className="arrow-doodle" src="https://firebasestorage.googleapis.com/v0/b/leafmark-771fa.appspot.com/o/doodles%2Fdoodle-126.png?alt=media"/>
       </form>
     );
   }

@@ -68,6 +68,8 @@ class Bookshelf extends React.Component {
     const { links } = this.state;
     return (
       <div className="shelf">
+        <NewLink handleSubmit={this.unrollUrl.bind(this)} />
+
         {links.length ? (
           links.map(link => (
             <Link
@@ -80,7 +82,6 @@ class Bookshelf extends React.Component {
         ) : (
           <p>no links yet! add one!</p>
         )}
-        <NewLink handleSubmit={this.unrollUrl.bind(this)} />
       </div>
     );
   }

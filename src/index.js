@@ -34,6 +34,7 @@ class App extends React.Component {
             <>
               <button onClick={signInWithTwitter}>Sign in with Twitter</button>
               <button onClick={signInWithGoogle}>Sign in with Google</button>
+              <img className="bananaman" src="https://firebasestorage.googleapis.com/v0/b/leafmark-771fa.appspot.com/o/doodles%2Fdoodle-95.png?alt=media&token=837767b8-34aa-47c6-8aa1-7bef9cdbe450" />
             </>
           )}
         <ul>{lis}</ul>
