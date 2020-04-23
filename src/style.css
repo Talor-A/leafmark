@@ -6,7 +6,7 @@
 }
 
 .link-drop-zone {
-/*   min-height: 240px;
+  /*   min-height: 240px;
   width: 240px; */
   background-color: aquamarine;
 }
@@ -16,14 +16,43 @@
   grid-gap: 10px;
 }
 .shelf-item {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
   background-color: lemonchiffon;
-  padding: 1em;
-  width:240px;
-  height:400px;
+  width: 240px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: 2px 5px 5px 2px;
+  overflow: hidden;
+  transition: transform .3s ease-in-out;
 }
-.shelf-item > summary {
-  background-color: lemonchiffon;
-  position: sticky;
+.shelf-item:hover {
+  transform: translateY(-5px) rotateZ(-3deg);
+}
+.shelf-item:hover:last-child {
+  transform: none; /* hack for last item being input */
+}
+.shelf-item > img {
+  /* aspect-ratio: .5; */
+  max-width: 100%;
+  max-height: 50%;
+  align-self: center;
+}
+
+.shelf-item > .text-area {
+  padding: 1em;
+}
+.shelf-item .title {
+  text-decoration: none;
+  font-size: 1.5em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+}
+.shelf-item .description {
+  /* margin:0px; */
+  opacity: 0.7;
 }
 
 body {

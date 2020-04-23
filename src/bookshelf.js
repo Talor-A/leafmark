@@ -41,6 +41,7 @@ class Bookshelf extends React.Component {
           return link;
         }
       });
+      console.log(links)
 
       this.setState({ links });
     });

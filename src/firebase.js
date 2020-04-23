@@ -17,7 +17,8 @@ export const app = firebase.initializeApp({
 // hire doorman
 export const firebaseAppAuth = app.auth();
 export const providers = {
-  twitterProvider: new firebase.auth.TwitterAuthProvider()
+  twitterProvider: new firebase.auth.TwitterAuthProvider(),
+  googleProvider: new firebase.auth.GoogleAuthProvider()
 };
 
 // create mr data man

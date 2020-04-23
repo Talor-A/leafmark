@@ -11,24 +11,42 @@ const hashCode = s => {
 };
 
 const hashToHsl = h => `hsl(${h % 360}, 75%, 75%)`;
+const getMaxPopulationSwatch = (palette) => {
+  let maxPop = 0;
+  let maxSwatch;
+  Object.values(palette).forEach(test => {
+    if (test.population > maxPop) {
+      maxPop = test.population;
+      maxSwatch = test;
+    }
+  })
+  return maxSwatch || Object.values(palette)[0]
+}
 
 
-const Link = ({ link, onRefresh }) => (
-  <div
-    className="shelf-item"
-    style={{ backgroundColor: hashToHsl(hashCode(link.url)) }}
-  >
-    <details style={{ overflow: "hidden", maxHeight: "100%" }}>
-      <summary>
-        <a href={link.url}>{link.title}</a>
-      </summary>
-      {link.updatedAt && <p>{link.updatedAt.toDateString()}</p>}
-      <button onClick={() => onRefresh(link)}>Refresh</button>
-      {link.data.image && <img src={link.data.image} width="100%" />}
-      <p>{link.data.description}</p>
-      <code dangerouslySetInnerHTML={{ __html: link.data.text }}></code>
-    </details>
-  </div>
-);
+const Link = ({ link, onRefresh }) => {
+  let { title, url, data } = link;
+  var hasTitle = !!title
+
+  let backgroundColor = hashToHsl(hashCode(link.url))
+  let color = '#000'
+  if (link.data.palette) {
+    const swatch = getMaxPopulationSwatch(link.data.palette);
+
+    backgroundColor = swatch.hex;
+    color = swatch.textColor;
+  }
+  return (
+    <a target="_blank" and rel="noopener noreferrer" href={url} className="shelf-item" style={{ backgroundColor, color }}>
+        {link.data.image && <img src={data.image} />}
+        <div className="text-area">
+          <a target="_blank" and rel="noopener noreferrer" href={url} className={hasTitle && "title"} style={{ color, wordWrap: "break-word" }}>{hasTitle ? title : url}</a>
+          <p className="description">{data.description}</p>
+          {link.updatedAt && <p>{link.updatedAt.toDateString()}</p>}
+          <code dangerouslySetInnerHTML={{ __html: link.data.text }}></code>
+        </div>
+    </a>
+  )
+};
 
 export default Link;
