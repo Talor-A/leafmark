@@ -59,6 +59,10 @@ class Bookshelf extends React.Component {
     const { shelf } = this.state;
     unroll(link.url).then(obj => shelf.doc(link.uid).update(obj));
   }
+  delete(link) {
+    const { shelf } = this.state;
+    shelf.doc(link.uid).delete();
+  }
 
   render() {
     const { links } = this.state;
@@ -67,7 +71,8 @@ class Bookshelf extends React.Component {
         {links.length ? (
           links.map(link => (
             <Link
-              onRefresh={this.refresh.bind(this)}
+              handleRefresh={this.refresh.bind(this)}
+              handleDelete={this.delete.bind(this)}
               key={link.uid}
               link={link}
             />

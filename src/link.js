@@ -24,7 +24,7 @@ const getMaxPopulationSwatch = (palette) => {
 }
 
 
-const Link = ({ link, onRefresh }) => {
+const Link = ({ link, handleRefresh, handleDelete }) => {
   let { title, url, data } = link;
   var hasTitle = !!title
 
@@ -37,14 +37,15 @@ const Link = ({ link, onRefresh }) => {
     color = swatch.textColor;
   }
   return (
-    <a target="_blank" and rel="noopener noreferrer" href={url} className="shelf-item" style={{ backgroundColor, color }}>
+    <a target="_blank" rel="noopener noreferrer" href={url} className="shelf-item" style={{ backgroundColor, color }}>
         {link.data.image && <img src={data.image} />}
         <div className="text-area">
-          <a target="_blank" and rel="noopener noreferrer" href={url} className={hasTitle && "title"} style={{ color, wordWrap: "break-word" }}>{hasTitle ? title : url}</a>
+          <p className={hasTitle ? "title":""} style={{ color, wordWrap: "break-word" }}>{hasTitle ? title : url}</p>
           <p className="description">{data.description}</p>
           {link.updatedAt && <p>{link.updatedAt.toDateString()}</p>}
           <code dangerouslySetInnerHTML={{ __html: link.data.text }}></code>
         </div>
+        <button className="delete" onClick={(e) => {e.preventDefault();handleDelete(link);}}>×</button>
     </a>
   )
 };

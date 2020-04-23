@@ -5,11 +5,6 @@
   box-sizing: border-box;
 }
 
-.link-drop-zone {
-  /*   min-height: 240px;
-  width: 240px; */
-  background-color: aquamarine;
-}
 .shelf {
   display: grid;
   grid-template-columns: repeat(auto-fit, 240px);
@@ -26,6 +21,7 @@
   border-radius: 2px 5px 5px 2px;
   overflow: hidden;
   transition: transform .3s ease-in-out;
+  transform: translate(0);
 }
 .shelf-item:hover {
   transform: translateY(-5px) rotateZ(-3deg);
@@ -54,16 +50,21 @@
   /* margin:0px; */
   opacity: 0.7;
 }
+.shelf-item  .delete {
+  top: 0px;
+  right: 0px;
+  position: absolute;
+}
 
 body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
-  background-color: mediumaquamarine;
+  background-color: #f0f0f0;
 }
 
 h1 {
   font-style: italic;
-  color: #373fff;
+  color: #3F7A63;
 }
 
 .bold {
