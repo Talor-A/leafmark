@@ -19,7 +19,7 @@
     "babel-loader": "^8.0.4",
     "concurrently": "^4.0.1",
     "copy-webpack-plugin": "^4.5.4",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "firebase": "^7.14.1",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
